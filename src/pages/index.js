@@ -4,8 +4,9 @@ import { Box, Center, Text, Link } from "@chakra-ui/react"
 
 import LogIn from '../components/Login'
 import Register from '../components/Register'
+import axios from 'axios'
 
-export default function Home() {
+export default function Home({ businesses }) {
   const [renderRegisterPage, setRenderRegisterPage] = React.useState(false)
   return (
     <Box pt={20} pb={20}>
@@ -15,7 +16,7 @@ export default function Home() {
       </Head>
       {renderRegisterPage ? (
         <>
-          <Register />
+          <Register businesses={businesses} />
           <Center mt={10}>
             <Text>
              Have an account?{" "}
@@ -41,4 +42,13 @@ export default function Home() {
       
     </Box>
   )
+}
+
+export async function getServerSideProps() {
+  const response = await axios('http://localhost:3030/businesses')
+  return {
+    props: {
+      businesses: response.data.businesses
+    },
+  }
 }

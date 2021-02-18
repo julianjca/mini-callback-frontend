@@ -13,11 +13,11 @@ const LogIn = () => {
         <Stack spacing={5}>
           <FormControl id="email">
             <FormLabel>Email address</FormLabel>
-            <Input width={300} type="email" isFullWidth placeholder="john@mail.com" size="md" />
+            <Input width={300} type="email" placeholder="john@mail.com" size="md" />
           </FormControl>
-          <FormControl id="email">
+          <FormControl id="password">
             <FormLabel>Password</FormLabel>
-            <Input width={300} type="password" isFullWidth placeholder="Enter your password" size="md" />
+            <Input width={300} type="password" placeholder="Enter your password" size="md" />
           </FormControl>
           <Button size="md" width={300} colorScheme="blue">
             Log in
