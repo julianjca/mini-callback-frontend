@@ -6,7 +6,7 @@ import LogIn from '../components/Login'
 import Register from '../components/Register'
 import axios from 'axios'
 
-export default function Home({ businesses }) {
+export default function Home() {
   const [renderRegisterPage, setRenderRegisterPage] = React.useState(false)
   return (
     <Box pt={20} pb={20}>
@@ -16,7 +16,7 @@ export default function Home({ businesses }) {
       </Head>
       {renderRegisterPage ? (
         <>
-          <Register businesses={businesses} />
+          <Register setRenderRegisterPage={setRenderRegisterPage} />
           <Center mt={10}>
             <Text>
              Have an account?{" "}
@@ -42,13 +42,4 @@ export default function Home({ businesses }) {
       
     </Box>
   )
-}
-
-export async function getServerSideProps() {
-  const response = await axios('http://localhost:3030/businesses')
-  return {
-    props: {
-      businesses: response.data.businesses
-    },
-  }
 }

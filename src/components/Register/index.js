@@ -1,22 +1,19 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { Center, Container, Heading, Stack, Input, FormControl, FormLabel, Button, Select } from "@chakra-ui/react"
+import { Center, Container, Heading, Stack, Input, FormControl, FormLabel, Button } from "@chakra-ui/react"
 
-const Register = ({ businesses }) => {
+const Register = ({ setRenderRegisterPage }) => {
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
-  const [business, setBusiness] = useState('')
 
   const handleSubmit = async () => {
     await axios.post('http://localhost:3030/users', {
       name,
       password,
       email,
-      businessId: business,
     })
-
-    console.log('registered!')
+    setRenderRegisterPage(false)
   }
 
   return (
@@ -58,16 +55,6 @@ const Register = ({ businesses }) => {
               size="md"
               onChange={e => setPassword(e.target.value)}
             />
-          </FormControl>
-          <FormControl id="business">
-            <FormLabel>Business</FormLabel>
-            <Select onChange={(e) => setBusiness(e.target.value)} placeholder="Select business">
-              {
-                businesses.map(business => (
-                  <option key={business.id} value={business.id}>{business.businessName}</option>
-                ))
-              }
-            </Select>
           </FormControl>
           <Button 
             onClick={handleSubmit} 
