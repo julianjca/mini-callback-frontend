@@ -1,8 +1,21 @@
 import React from 'react'
-import { Flex, Box, Button, Heading, Table, Thead, Tbody, Tr, Th, Td } from '@chakra-ui/react'
+import {
+  Flex,
+  Box,
+  Button,
+  Heading,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  Badge,
+} from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { useAuthDispatch } from '../../context/auth'
 import { DO_LOGOUT } from '../../constants'
+import { mapColorScheme } from '../../lib'
 
 const Dashboard = ({ callbacks }) => {
   const router = useRouter()
@@ -35,6 +48,7 @@ const Dashboard = ({ callbacks }) => {
             <Th>Transaction ID</Th>
             <Th>Virtual Account</Th>
             <Th>Bank Code</Th>
+            <Th>Status</Th>
             <Th>Detail</Th>
           </Tr>
         </Thead>
@@ -45,6 +59,15 @@ const Dashboard = ({ callbacks }) => {
               <Td>{callback.transaction_id}</Td>
               <Td>{callback.virtual_account}</Td>
               <Td>{callback.bank_code}</Td>
+              <Td>
+                <Badge
+                  borderRadius="full"
+                  px="2"
+                  colorScheme={mapColorScheme(callback.callbackResponseCode)}
+                >
+                  {callback.callbackResponseCode}
+                </Badge>
+              </Td>
               <Td>
                 <Button
                   onClick={() =>
