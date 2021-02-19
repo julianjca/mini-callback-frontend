@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "kentcdodds",
+    "kentcdodds/react",
+    "kentcdodds/jsx-a11y",
+    "kentcdodds/jest",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "fp"
+  ],
+  "rules": {
+    "import/no-unresolved": "off",
+    "react/prop-types": "off",
+    "react/jsx-pascal-case": "off",
+    "import/order": "off",
+    "babel/camelcase": "off",
+    "jsx-a11y/label-has-for": "off",
+    "max-lines-per-function": "off",
+    "babel/quotes": "off",
+    "consistent-return": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/jsx-child-element-spacing": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  }
+}
