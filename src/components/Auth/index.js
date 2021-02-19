@@ -11,6 +11,7 @@ const Auth = ({ children }) => {
 
   useEffect(() => {
     if (!state.isAuthenticating && !state.user && !state.isLoggedIn) {
+      console.log('masuk')
       router.push('/', '/', { shallow: true })
     }
   }, [state, router])
@@ -25,6 +26,7 @@ const Auth = ({ children }) => {
   if (!state.isAuthenticating && state.isLoggedIn && state.user) {
     return children
   }
+  return null
 }
 
 export default Auth

@@ -12,11 +12,15 @@ import {
   FormLabel,
   Button,
 } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
+import { useAuthDispatch } from '../../context/auth'
+import { SET_AUTHENTICATING, SET_LOGIN_STATE, SET_USER } from '../../constants'
 
 const LogIn = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  // eslint-disable-next-line no-unused-vars
+  const router = useRouter()
+  const dispatch = useAuthDispatch()
 
   const submitForm = async () => {
     const res = await axios.post(`http://localhost:3030/users/login`, {
@@ -24,6 +28,20 @@ const LogIn = () => {
       password,
     })
     cookie.save('userToken', res.data.accessToken)
+
+    dispatch({
+      type: SET_USER,
+      user: res.data.user,
+    })
+    dispatch({
+      type: SET_LOGIN_STATE,
+      isLoggedIn: true,
+    })
+    dispatch({
+      type: SET_AUTHENTICATING,
+      isAuthenticating: false,
+    })
+    router.push('/dashboard')
   }
 
   return (
