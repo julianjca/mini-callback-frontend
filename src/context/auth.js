@@ -2,7 +2,7 @@ import React, { useEffect, createContext, useReducer } from 'react'
 import cookie from 'react-cookies'
 import axios from 'axios'
 
-import { SET_LOGIN_STATE, SET_USER } from '../constants'
+import { SET_LOGIN_STATE, SET_USER, SET_AUTHENTICATING } from '../constants'
 
 const AuthStateContext = createContext()
 const AuthDispatchContext = createContext()
@@ -17,6 +17,10 @@ const reducer = (state, action) => {
       return { ...state, user: action.user }
     }
 
+    case SET_AUTHENTICATING: {
+      return { ...state, isAuthenticating: action.isAuthenticating }
+    }
+
     default:
       console.log('error')
   }
@@ -26,16 +30,23 @@ const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, {
     isLoggedIn: false,
     user: null,
+    isAuthenticating: true,
   })
 
   useEffect(() => {
     const cookies = cookie.load('userToken')
     const doAuth = async () => {
+      dispatch({
+        type: SET_AUTHENTICATING,
+        isAuthenticating: true,
+      })
+
       const res = await axios.get('http://localhost:3030/users/authenticate', {
         headers: {
           Authorization: `Bearer ${cookies}`,
         },
       })
+
       dispatch({
         type: SET_USER,
         user: res.data.user,
@@ -43,6 +54,10 @@ const AuthProvider = ({ children }) => {
       dispatch({
         type: SET_LOGIN_STATE,
         isLoggedIn: true,
+      })
+      dispatch({
+        type: SET_AUTHENTICATING,
+        isAuthenticating: false,
       })
     }
     if (typeof window !== undefined) {

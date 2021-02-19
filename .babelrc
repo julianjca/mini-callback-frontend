@@ -1,8 +1,18 @@
 {
   "presets": [
-    "next/babel"
+    "next/babel",
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ]
   ],
   "plugins": [
+    ["@emotion"],
     [
       "@babel/plugin-proposal-decorators",
       {
