@@ -61,8 +61,18 @@ Object {
             </button>
           </div>
         </div>
+        <div
+          class="css-46b038"
+        >
+          <button
+            class="chakra-button css-myeq6i"
+            type="button"
+          >
+            Send callback
+          </button>
+        </div>
         <table
-          class="chakra-table css-9ag3r3"
+          class="chakra-table css-93szjo"
           role="table"
         >
           <thead
@@ -189,8 +199,18 @@ Object {
           </button>
         </div>
       </div>
+      <div
+        class="css-46b038"
+      >
+        <button
+          class="chakra-button css-myeq6i"
+          type="button"
+        >
+          Send callback
+        </button>
+      </div>
       <table
-        class="chakra-table css-9ag3r3"
+        class="chakra-table css-93szjo"
         role="table"
       >
         <thead

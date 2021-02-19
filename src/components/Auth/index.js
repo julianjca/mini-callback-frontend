@@ -11,7 +11,6 @@ const Auth = ({ children }) => {
 
   useEffect(() => {
     if (!state.isAuthenticating && !state.user && !state.isLoggedIn) {
-      console.log('masuk')
       router.push('/', '/', { shallow: true })
     }
   }, [state, router])

@@ -1,9 +1,10 @@
 /* eslint-disable testing-library/prefer-screen-queries */
 import React from 'react'
-import { render, fireEvent } from '../../../test-utils'
+import { render, fireEvent, waitFor } from '../../../test-utils'
 import * as context from '../../context/auth'
 import * as nextRouter from 'next/router'
 import { DO_LOGOUT } from '../../constants'
+import axios from 'axios'
 
 import CallbackDetail from './index'
 
@@ -58,5 +59,29 @@ describe('CallbackDetail', () => {
     expect(element.getByText('e8980029-04a0-4b9c-8c64-182c8a81cc43')).toBeInTheDocument()
     expect(element.getByText('123')).toBeInTheDocument()
     expect(element.getByText('1234')).toBeInTheDocument()
+  })
+
+  test('able to retry', async () => {
+    const element = render(<CallbackDetail callback={{ ...callback, callbackResponseCode: 400 }} />)
+
+    expect(element.getByText('400')).toBeInTheDocument()
+
+    const retryButton = element.getByText('Retry')
+    expect(retryButton).toBeInTheDocument()
+
+    const axiosMock = jest.spyOn(axios, 'put').mockImplementation(() =>
+      Promise.resolve({
+        data: {
+          callback: { ...callback, callbackResponseCode: 200 },
+        },
+      }),
+    )
+
+    fireEvent.click(retryButton)
+
+    await waitFor(() => expect(element.queryByText('Retry')).not.toBeInTheDocument())
+    await waitFor(() => expect(element.getByText('200')).toBeInTheDocument())
+
+    axiosMock.mockClear()
   })
 })
