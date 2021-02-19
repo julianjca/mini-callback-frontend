@@ -41,7 +41,14 @@ const Dashboard = ({ callbacks }) => {
           </Button>
         </Box>
       </Flex>
-      <Table mt={20} variant="simple">
+      <Box mt={30}>
+        <Button
+          onClick={() => router.push('/callbacks/send', '/callbacks/send', { shallow: true })}
+        >
+          Send callback
+        </Button>
+      </Box>
+      <Table mt={10} variant="simple">
         <Thead>
           <Tr>
             <Th>Callback ID</Th>

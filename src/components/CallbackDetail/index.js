@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Flex, Box, Button, Heading, Badge, Text, Center } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
+import axios from 'axios'
+import cookie from 'react-cookies'
 
 import { useAuthDispatch } from '../../context/auth'
 import { DO_LOGOUT } from '../../constants'
@@ -10,6 +12,20 @@ import { mapColorScheme } from '../../lib'
 const CallbackDetail = ({ callback }) => {
   const router = useRouter()
   const dispatch = useAuthDispatch()
+  const [callbackStatus, setCallbackStatus] = useState(callback.callbackResponseCode)
+
+  const retryCallback = async () => {
+    const res = await axios.put(
+      `http://localhost:3030/callbacks/retry/${callback.id}`,
+      {},
+      {
+        headers: {
+          Authorization: `Bearer ${cookie.load('userToken')}`,
+        },
+      },
+    )
+    setCallbackStatus(res.data.callback.callbackResponseCode)
+  }
 
   return (
     <Center flexDirection="column" pt={20} pb={20}>
@@ -35,12 +51,8 @@ const CallbackDetail = ({ callback }) => {
         <Box maxWidth={600} width="100%" borderWidth="1px" borderRadius="lg" overflow="hidden">
           <Box p="6">
             <Box d="flex" alignItems="baseline">
-              <Badge
-                borderRadius="full"
-                px="2"
-                colorScheme={mapColorScheme(callback.callbackResponseCode)}
-              >
-                {callback.callbackResponseCode}
+              <Badge borderRadius="full" px="2" colorScheme={mapColorScheme(callbackStatus)}>
+                {callbackStatus}
               </Badge>
               <Box
                 color="gray.500"
@@ -125,7 +137,7 @@ const CallbackDetail = ({ callback }) => {
               </Text>
             </Box>
             <Box mt={5} textAlign="right">
-              {callback.callbackResponseCode >= 300 && <Button>Retry</Button>}
+              {callbackStatus >= 400 && <Button onClick={retryCallback}>Retry</Button>}
             </Box>
           </Box>
         </Box>

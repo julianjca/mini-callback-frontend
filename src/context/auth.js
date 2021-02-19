@@ -78,6 +78,10 @@ const AuthProvider = ({ children }) => {
           type: SET_LOGIN_STATE,
           isLoggedIn: false,
         })
+        dispatch({
+          type: SET_AUTHENTICATING,
+          isAuthenticating: false,
+        })
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

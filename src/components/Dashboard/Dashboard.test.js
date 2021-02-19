@@ -60,4 +60,17 @@ describe('Dashboard', () => {
     expect(element.getByText('1234')).toBeInTheDocument()
     expect(element.getByText('e8980029-04a0-4b9c-8c64-182c8a81cc43')).toBeInTheDocument()
   })
+
+  test('open detail page when the button is clicked', () => {
+    const element = render(<Dashboard callbacks={callbacks} />)
+
+    const seeDetailButton = element.getByText('See detail')
+
+    fireEvent.click(seeDetailButton)
+
+    expect(push).toHaveBeenCalledTimes(1)
+    expect(push).toHaveBeenCalledWith('/callbacks/[id]', `/callbacks/${callbacks[0].id}`, {
+      shallow: true,
+    })
+  })
 })

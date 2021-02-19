@@ -1,0 +1,370 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register renders the right text 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    class="chakra-ui-light"
+  >
+    <div
+      id="chakra-toast-portal"
+    >
+      <ul
+        id="chakra-toast-manager-top"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; top: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; right: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; bottom: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; right: 0px;"
+      />
+    </div>
+    <div>
+      <div
+        class="chakra-container css-kvcvn0"
+      >
+        <div
+          class="css-gmuwbf"
+        >
+          <h2
+            class="chakra-heading css-zey6tx"
+          >
+            Send callback
+          </h2>
+        </div>
+        <div
+          class="css-rwokqt"
+        >
+          <div
+            class="chakra-stack css-ynqzo5"
+          >
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-1qqx8g3"
+                for="va"
+                id="va-label"
+              >
+                Virtual account
+              </label>
+              <input
+                class="chakra-input css-1hv7q3p"
+                data-testid="va-input"
+                id="va"
+                placeholder="Virtual Account"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-1qqx8g3"
+                for="bank-code"
+                id="bank-code-label"
+              >
+                Bank code
+              </label>
+              <input
+                class="chakra-input css-1hv7q3p"
+                data-testid="bank-code-input"
+                id="bank-code"
+                placeholder="Bank code"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-1qqx8g3"
+                for="trx"
+                id="trx-label"
+              >
+                Transaction ID
+              </label>
+              <input
+                class="chakra-input css-1hv7q3p"
+                data-testid="trx-id-input"
+                id="trx"
+                placeholder="Bank code"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-1qqx8g3"
+                for="business"
+                id="business-label"
+              >
+                Business
+              </label>
+              <div
+                class="chakra-select__wrapper css-42b2qy"
+              >
+                <select
+                  class="chakra-select css-6jerdq"
+                  data-testid="business-input"
+                  id="business"
+                >
+                  <option
+                    value=""
+                  >
+                    Select option
+                  </option>
+                </select>
+                <div
+                  class="chakra-select__icon-wrapper css-fmsrp"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="chakra-select__icon"
+                    focusable="false"
+                    role="presentation"
+                    style="width: 1em; height: 1em; color: currentColor;"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <button
+              class="chakra-button css-pa74a0"
+              data-testid="send-callback-button"
+              type="button"
+            >
+              Send callback
+            </button>
+            <button
+              class="chakra-button css-1g4dmh7"
+              type="button"
+            >
+              Go back
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="chakra-container css-kvcvn0"
+    >
+      <div
+        class="css-gmuwbf"
+      >
+        <h2
+          class="chakra-heading css-zey6tx"
+        >
+          Send callback
+        </h2>
+      </div>
+      <div
+        class="css-rwokqt"
+      >
+        <div
+          class="chakra-stack css-ynqzo5"
+        >
+          <div
+            class="chakra-form-control css-1kxonj9"
+            role="group"
+          >
+            <label
+              class="chakra-form__label css-1qqx8g3"
+              for="va"
+              id="va-label"
+            >
+              Virtual account
+            </label>
+            <input
+              class="chakra-input css-1hv7q3p"
+              data-testid="va-input"
+              id="va"
+              placeholder="Virtual Account"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="chakra-form-control css-1kxonj9"
+            role="group"
+          >
+            <label
+              class="chakra-form__label css-1qqx8g3"
+              for="bank-code"
+              id="bank-code-label"
+            >
+              Bank code
+            </label>
+            <input
+              class="chakra-input css-1hv7q3p"
+              data-testid="bank-code-input"
+              id="bank-code"
+              placeholder="Bank code"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="chakra-form-control css-1kxonj9"
+            role="group"
+          >
+            <label
+              class="chakra-form__label css-1qqx8g3"
+              for="trx"
+              id="trx-label"
+            >
+              Transaction ID
+            </label>
+            <input
+              class="chakra-input css-1hv7q3p"
+              data-testid="trx-id-input"
+              id="trx"
+              placeholder="Bank code"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="chakra-form-control css-1kxonj9"
+            role="group"
+          >
+            <label
+              class="chakra-form__label css-1qqx8g3"
+              for="business"
+              id="business-label"
+            >
+              Business
+            </label>
+            <div
+              class="chakra-select__wrapper css-42b2qy"
+            >
+              <select
+                class="chakra-select css-6jerdq"
+                data-testid="business-input"
+                id="business"
+              >
+                <option
+                  value=""
+                >
+                  Select option
+                </option>
+              </select>
+              <div
+                class="chakra-select__icon-wrapper css-fmsrp"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="chakra-select__icon"
+                  focusable="false"
+                  role="presentation"
+                  style="width: 1em; height: 1em; color: currentColor;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <button
+            class="chakra-button css-pa74a0"
+            data-testid="send-callback-button"
+            type="button"
+          >
+            Send callback
+          </button>
+          <button
+            class="chakra-button css-1g4dmh7"
+            type="button"
+          >
+            Go back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
