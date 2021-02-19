@@ -2,7 +2,7 @@ import React, { useEffect, createContext, useReducer } from 'react'
 import cookie from 'react-cookies'
 import axios from 'axios'
 
-import { SET_LOGIN_STATE, SET_USER, SET_AUTHENTICATING } from '../constants'
+import { SET_LOGIN_STATE, SET_USER, SET_AUTHENTICATING, DO_LOGOUT } from '../constants'
 
 const AuthStateContext = createContext()
 const AuthDispatchContext = createContext()
@@ -19,6 +19,11 @@ const reducer = (state, action) => {
 
     case SET_AUTHENTICATING: {
       return { ...state, isAuthenticating: action.isAuthenticating }
+    }
+
+    case DO_LOGOUT: {
+      cookie.remove('userToken')
+      return { ...state, isAuthenticating: false, user: null, isLoggedIn: false }
     }
 
     default:
