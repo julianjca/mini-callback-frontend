@@ -12,7 +12,7 @@ export default function Home() {
   const state = useAuthState()
 
   useEffect(() => {
-    if (state.isLoggedIn && state.user) {
+    if (state.isLoggedIn && state.user && !state.isAuthenticating) {
       Router.push('/dashboard', '/dashboard', { shallow: true })
     }
   }, [state])
