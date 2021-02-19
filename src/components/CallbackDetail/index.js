@@ -5,15 +5,7 @@ import { useRouter } from 'next/router'
 import { useAuthDispatch } from '../../context/auth'
 import { DO_LOGOUT } from '../../constants'
 
-const mapColorScheme = callbackResponseCode => {
-  if (callbackResponseCode < 300) {
-    return 'teal'
-  } else if (callbackResponseCode < 400) {
-    return 'yellow'
-  } else if (callbackResponseCode >= 400) {
-    return 'red'
-  }
-}
+import { mapColorScheme } from '../../lib'
 
 const CallbackDetail = ({ callback }) => {
   const router = useRouter()
