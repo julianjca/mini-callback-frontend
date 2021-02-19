@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register renders the right text 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    class="chakra-ui-light"
+  >
+    <div
+      id="chakra-toast-portal"
+    >
+      <ul
+        id="chakra-toast-manager-top"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; top: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-top-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: 0px; right: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-left"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; bottom: 0px; right: 0px; left: 0px;"
+      />
+      <ul
+        id="chakra-toast-manager-bottom-right"
+        style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: 0px; right: 0px;"
+      />
+    </div>
+    <div>
+      <div
+        class="chakra-container css-1plwrig"
+      >
+        <div
+          class="css-gmuwbf"
+        >
+          <h2
+            class="chakra-heading css-zey6tx"
+          >
+            Register
+          </h2>
+        </div>
+        <div
+          class="css-rwokqt"
+        >
+          <div
+            class="chakra-stack css-ynqzo5"
+          >
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-1qqx8g3"
+                for="name"
+                id="name-label"
+              >
+                Name
+              </label>
+              <input
+                class="chakra-input css-1hv7q3p"
+                data-testid="name-input"
+                id="name"
+                placeholder="John"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-1qqx8g3"
+                for="email"
+                id="email-label"
+              >
+                Email address
+              </label>
+              <input
+                class="chakra-input css-1hv7q3p"
+                data-testid="email-input"
+                id="email"
+                placeholder="john@mail.com"
+                type="email"
+              />
+            </div>
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-1qqx8g3"
+                for="password"
+                id="password-label"
+              >
+                Password
+              </label>
+              <input
+                class="chakra-input css-1hv7q3p"
+                data-testid="password-input"
+                id="password"
+                placeholder="Enter your password"
+                type="password"
+              />
+            </div>
+            <button
+              class="chakra-button css-pa74a0"
+              type="button"
+            >
+              Sign up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="chakra-container css-1plwrig"
+    >
+      <div
+        class="css-gmuwbf"
+      >
+        <h2
+          class="chakra-heading css-zey6tx"
+        >
+          Register
+        </h2>
+      </div>
+      <div
+        class="css-rwokqt"
+      >
+        <div
+          class="chakra-stack css-ynqzo5"
+        >
+          <div
+            class="chakra-form-control css-1kxonj9"
+            role="group"
+          >
+            <label
+              class="chakra-form__label css-1qqx8g3"
+              for="name"
+              id="name-label"
+            >
+              Name
+            </label>
+            <input
+              class="chakra-input css-1hv7q3p"
+              data-testid="name-input"
+              id="name"
+              placeholder="John"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="chakra-form-control css-1kxonj9"
+            role="group"
+          >
+            <label
+              class="chakra-form__label css-1qqx8g3"
+              for="email"
+              id="email-label"
+            >
+              Email address
+            </label>
+            <input
+              class="chakra-input css-1hv7q3p"
+              data-testid="email-input"
+              id="email"
+              placeholder="john@mail.com"
+              type="email"
+            />
+          </div>
+          <div
+            class="chakra-form-control css-1kxonj9"
+            role="group"
+          >
+            <label
+              class="chakra-form__label css-1qqx8g3"
+              for="password"
+              id="password-label"
+            >
+              Password
+            </label>
+            <input
+              class="chakra-input css-1hv7q3p"
+              data-testid="password-input"
+              id="password"
+              placeholder="Enter your password"
+              type="password"
+            />
+          </div>
+          <button
+            class="chakra-button css-pa74a0"
+            type="button"
+          >
+            Sign up
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

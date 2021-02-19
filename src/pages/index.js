@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
-import { Box, Center, Text, Link } from "@chakra-ui/react"
+import Router from 'next/router'
+import { Box, Center, Text, Link } from '@chakra-ui/react'
 
 import LogIn from '../components/Login'
 import Register from '../components/Register'
-import axios from 'axios'
+import { useAuthState } from '../context/auth'
 
 export default function Home() {
   const [renderRegisterPage, setRenderRegisterPage] = React.useState(false)
+  const state = useAuthState()
+
+  useEffect(() => {
+    if (state.isLoggedIn && state.user) {
+      Router.push('/dashboard', '/dashboard', { shallow: true })
+    }
+  }, [state])
+
   return (
     <Box pt={20} pb={20}>
       <Head>
@@ -19,7 +28,7 @@ export default function Home() {
           <Register setRenderRegisterPage={setRenderRegisterPage} />
           <Center mt={10}>
             <Text>
-             Have an account?{" "}
+              Have an account?{' '}
               <Link onClick={() => setRenderRegisterPage(false)} colorScheme="blue" color="blue">
                 login instead.
               </Link>
@@ -31,7 +40,7 @@ export default function Home() {
           <LogIn />
           <Center mt={10}>
             <Text>
-              Don't have an account yet?{" "}
+              Don't have an account yet?{' '}
               <Link onClick={() => setRenderRegisterPage(true)} colorScheme="blue" color="blue">
                 create one
               </Link>
@@ -39,7 +48,6 @@ export default function Home() {
           </Center>
         </>
       )}
-      
     </Box>
   )
 }
